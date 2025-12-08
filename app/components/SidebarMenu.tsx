@@ -16,8 +16,8 @@ export function SidebarMenu() {
   return (
     <>
       {/* Top bar */}
-      <header className="flex items-center justify-between px-6 py-6 md:px-12">
-        <span className="text-lg tracking-[0.25em] font-semibold uppercase">
+      <header className="flex items-center bg-zinc-950 justify-between px-6 py-6 md:px-12">
+        <span className="text-white text-lg tracking-[0.25em] font-semibold uppercase">
           ORVEXIS
         </span>
 
@@ -27,11 +27,11 @@ export function SidebarMenu() {
         >
           {/* 4-line hamburger */}
           <span className="flex flex-col gap-[3px]">
-            <span className="h-[1px] w-7 bg-[#807E7E]" />
-            <span className="h-[1px] w-7 bg-[#807E7E]" />
-            <span className="h-[1px] w-7 bg-[#807E7E]" />
+            <span className="h-[1px] w-7 bg-white" />
+            <span className="h-[1px] w-7 bg-white" />
+            <span className="h-[1px] w-7 bg-white" />
           </span>
-          <span className="text-md">Menu</span>
+          <span className="text-md text-white">Menu</span>
         </button>
       </header>
 
