@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-zinc-50 text-zinc-900">
         <SidebarMenu />
-      <div style={{ width: '100%', height: '100vh', position: 'relative' }}>
+      <div style={{ width: '100%', height: 'full', position: 'relative' }}>
         <DarkVeil />
       </div>
         <OriginSection />

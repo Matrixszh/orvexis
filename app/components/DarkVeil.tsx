@@ -173,14 +173,14 @@ export default function DarkVeil({
   }, [hueShift, noiseIntensity, scanlineIntensity, speed, scanlineFrequency, warpAmount, resolutionScale]);
 
   return (
-    <div className="relative w-full h-full">
+    <div className="relative w-full h-[80vh] md:h-full">
       {/* WebGL background */}
       <canvas ref={ref} className="w-full h-full block" />
 
       {/* Hero content overlay */}
       <section className="pointer-events-none absolute inset-0 flex flex-col justify-between px-6 pb-10 pt-8 md:px-12 md:pt-12 lg:h-[calc(100vh-80px)]">
         {/* Center number + subtitle */}
-        <div className="flex flex-1 flex-col items-center justify-center text-center">
+        <div className=" flex flex-1 flex-col items-center justify-center text-center">
           <div className="pointer-events-auto">
             <BlurText
               text="Orvexis"
@@ -188,7 +188,7 @@ export default function DarkVeil({
               animateBy="words"
               direction="top"
               onAnimationComplete={handleAnimationComplete}
-              className="text-5xl md:text-7xl lg:text-9xl mb-8 tracking-tight text-zinc-50"
+              className="text-7xl lg:text-9xl mb-8 tracking-tight text-zinc-50"
             />
           </div>
 
@@ -198,21 +198,21 @@ export default function DarkVeil({
         </div>
 
         {/* Bottom content */}
-        <div className="pointer-events-auto mt-8 grid gap-10 md:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] md:items-end">
-          <div>
-            <h1 className="text-2xl text-zinc-50 font-semibold tracking-tight md:text-4xl">
+        <div className="pointer-events-auto mt-8 mb-10 grid gap-10 md:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] md:items-end">
+          <div className='hidden md:block'>
+            <h1 className="text-center md:text-left text-2xl text-zinc-50 font-semibold tracking-tight md:text-4xl">
               Developing the next generation
               <br />
               of software solutions
             </h1>
-            <p className="mt-4 max-w-xl text-md leading-relaxed text-zinc-300">
+            <p className="text-center md:text-left mt-4 max-w-xl text-md leading-relaxed text-zinc-300">
               We help AI &amp; SaaS founders turn complex ideas into clear,
               investor‑ready products and brands that users love. Built fast,
               designed to grow, and ready to ship.
             </p>
           </div>
 
-          <div className="flex gap-4 md:justify-end">
+          <div className="flex gap-4 justify-center md:justify-end">
             <button className="h-16 min-w-[150px] bg-white text-zinc-900 text-sm uppercase tracking-[0.25em]">
               Contact
             </button>
