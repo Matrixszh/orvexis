@@ -18,10 +18,10 @@ export function OriginSection() {
       }}
     >
 <TrueFocus 
-sentence="True Focus"
+sentence="Our Story"
 manualMode={false}
 blurAmount={5}
-borderColor="blue"
+borderColor="white"
 animationDuration={2}
 pauseBetweenAnimations={1}
 />

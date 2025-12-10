@@ -91,7 +91,7 @@ const TrueFocus: React.FC<TrueFocusProps> = ({
             ref={el => {
               wordRefs.current[index] = el;
             }}
-            className="relative text-[3rem] font-black cursor-pointer"
+            className="relative text-7xl font-regular text-white cursor-pointer"
             style={
               {
                 filter: manualMode

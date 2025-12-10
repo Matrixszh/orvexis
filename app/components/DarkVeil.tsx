@@ -188,7 +188,7 @@ export default function DarkVeil({
               animateBy="words"
               direction="top"
               onAnimationComplete={handleAnimationComplete}
-              className="text-7xl lg:text-9xl mb-8 tracking-tight text-zinc-50"
+              className="text-7xl lg:text-9xl mb-8 tracking-wide text-zinc-50"
             />
           </div>
 
