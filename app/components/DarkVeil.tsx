@@ -173,7 +173,7 @@ export default function DarkVeil({
   }, [hueShift, noiseIntensity, scanlineIntensity, speed, scanlineFrequency, warpAmount, resolutionScale]);
 
   return (
-    <div className="relative w-full h-[80vh] md:h-full">
+    <div className="relative w-full h-[80vh] md:h-screen">
       {/* WebGL background */}
       <canvas ref={ref} className="w-full h-full block" />
 
