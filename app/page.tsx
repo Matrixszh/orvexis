@@ -12,7 +12,7 @@ const handleAnimationComplete = () => {
 };
 export default function Home() {
   return (
-    <main className="min-h-screen bg-zinc-50 text-zinc-900">
+    <main className="min-h-screen bg-zinc-50 text-zinc-900 overflow-hidden">
         <SidebarMenu />
       <section className="w-full h-full">
         <DarkVeil />
