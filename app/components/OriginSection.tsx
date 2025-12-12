@@ -18,32 +18,30 @@ export function OriginSection() {
 
       {/* Stack heading + text under TrueFocus */}
 <div className="mt-20 w-full flex justify-center">
-    <div className="flex flex-row items-center gap-10 px-10 max-w-5xl">
-      <h2 className="flex-shrink-0 text-4xl font-semibold leading-tight text-[#F2F0EF] md:text-5xl">
-        This Is Where It
-        <br />
-        All Began To
-        <br />
-        Compile
-      </h2>
+  <div className="flex flex-col lg:flex-row items-center lg:items-start gap-10 px-10 max-w-5xl">
+    <h2 className="flex-shrink-0 text-4xl font-semibold leading-tight text-[#F2F0EF] md:text-5xl text-center lg:text-left">
+      This Is Where It
+      <br />
+      All Began To
+      <br />
+      Compile
+    </h2>
 
-  <div className="text-sm leading-relaxed text-[#F2F0EF] max-w-xl">
-    <p>
-      We help AI &amp; SaaS founders turn complex ideas into clear,
-      investor‑ready products and brands that users love. Built fast,
-      designed to grow, and ready to ship.
-    </p>
-    <p className="mt-4">
-      From the first line of code to launch day, every release is crafted
-      to be stable, scalable, and ready for real users. From the first line of code to launch day, every release is crafted
-      to be stable, scalable, and ready for real users.From the first line of code to launch day, every release is crafted
-      to be stable, scalable, and ready for real users.
-    </p>
-  </div>
+    <div className="text-sm leading-relaxed text-[#F2F0EF] max-w-xl text-center lg:text-left">
+      <p>
+        We help AI &amp; SaaS founders turn complex ideas into clear,
+        investor‑ready products and brands that users love. Built fast,
+        designed to grow, and ready to ship.
+      </p>
+      <p className="mt-4">
+        From the first line of code to launch day, every release is crafted
+        to be stable, scalable, and ready for real users. From the first line of code to launch day, every release is crafted
+        to be stable, scalable, and ready for real users.From the first line of code to launch day, every release is crafted
+        to be stable, scalable, and ready for real users.
+      </p>
     </div>
   </div>
-
-
+</div>
 
     </section>
   );
