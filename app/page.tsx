@@ -13,25 +13,52 @@ import {
   CloudIcon,
   PhotoIcon,
   BoltIcon,
+  SparklesIcon,
+  PaintBrushIcon,
+  DevicePhoneMobileIcon,
 } from "@heroicons/react/24/outline";
-import MagicBento from "@/components/MagicBento";
-
 const cards = [
   {
-    title: "AI Code Assistant",
+    title: "Web Application Development",
     description:
-      "Debug, refactor, and document complex codebases with intelligent suggestions.",
+      "Design and develop secure, scalable web applications aligned with your organization’s strategic objectives.",
     icon: CodeBracketIcon,
   },
   {
-    title: "Design System",
-    description: "Ship consistent, on-brand experiences with a unified component library.",
+    title: "Mobile Application Development",
+    description:
+      "Build robust Android and iOS applications that deliver reliable performance and seamless user experiences.",
+    icon: DevicePhoneMobileIcon,
+  },
+  {
+    title: "Custom Software Solutions",
+    description:
+      "Address complex business requirements with tailor-made software solutions engineered for scalability and reliability.",
     icon: CubeIcon,
   },
   {
-    title: "Analytics Dashboard",
-    description: "Track product health with real-time metrics and anomaly alerts.",
+    title: "UI/UX Design Services",
+    description:
+      "Create user-centered interfaces that enhance usability, strengthen brand presence, and improve product adoption.",
+    icon: PaintBrushIcon,
+  },
+  {
+    title: "CRM Implementation & Integration",
+    description:
+      "Deploy and integrate CRM platforms to streamline sales, support, and customer lifecycle management.",
     icon: ChartBarIcon,
+  },
+  {
+    title: "AI Chatbot Integration",
+    description:
+      "Integrate AI-driven chatbots to automate support, improve response times, and personalize customer interactions.",
+    icon: SparklesIcon,
+  },
+  {
+    title: "Workflow Automation",
+    description:
+      "Optimize operations by automating repetitive processes and connecting your existing tools and systems.",
+    icon: BoltIcon,
   },
 ];
 
