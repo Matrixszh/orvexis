@@ -17,6 +17,7 @@ import {
   PaintBrushIcon,
   DevicePhoneMobileIcon,
 } from "@heroicons/react/24/outline";
+import MagicBento from "@/components/MagicBento";
 const cards = [
   {
     title: "Web Application Development",
@@ -35,30 +36,6 @@ const cards = [
     description:
       "Address complex business requirements with tailor-made software solutions engineered for scalability and reliability.",
     icon: CubeIcon,
-  },
-  {
-    title: "UI/UX Design Services",
-    description:
-      "Create user-centered interfaces that enhance usability, strengthen brand presence, and improve product adoption.",
-    icon: PaintBrushIcon,
-  },
-  {
-    title: "CRM Implementation & Integration",
-    description:
-      "Deploy and integrate CRM platforms to streamline sales, support, and customer lifecycle management.",
-    icon: ChartBarIcon,
-  },
-  {
-    title: "AI Chatbot Integration",
-    description:
-      "Integrate AI-driven chatbots to automate support, improve response times, and personalize customer interactions.",
-    icon: SparklesIcon,
-  },
-  {
-    title: "Workflow Automation",
-    description:
-      "Optimize operations by automating repetitive processes and connecting your existing tools and systems.",
-    icon: BoltIcon,
   },
 ];
 
