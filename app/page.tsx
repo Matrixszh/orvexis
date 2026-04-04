@@ -14,6 +14,7 @@ import {
   PhotoIcon,
   BoltIcon,
 } from "@heroicons/react/24/outline";
+import MagicBento from "@/components/MagicBento";
 
 const cards = [
   {
@@ -31,26 +32,6 @@ const cards = [
     title: "Analytics Dashboard",
     description: "Track product health with real-time metrics and anomaly alerts.",
     icon: ChartBarIcon,
-  },
-  {
-    title: "Team Collaboration",
-    description: "Keep product, design, and engineering aligned in one workspace.",
-    icon: UsersIcon,
-  },
-  {
-    title: "API Gateway",
-    description: "Secure, observe, and throttle backend services at the edge.",
-    icon: CloudIcon,
-  },
-  {
-    title: "Content Studio",
-    description: "Plan and publish content across every channel from a single view.",
-    icon: PhotoIcon,
-  },
-  {
-    title: "Automation Flows",
-    description: "Automate repetitive workflows with event-driven pipelines.",
-    icon: BoltIcon,
   },
 ];
 
@@ -116,6 +97,34 @@ export default function Home() {
               </div>
             </SpotlightCard>
           ))}
+        </div>
+
+        <div className="mt-24">
+          <div className="mx-auto flex max-w-5xl flex-col items-center gap-4 px-4 text-center">
+            <span className="text-xs uppercase tracking-[0.3em] text-zinc-500">Products</span>
+            <h2 className="text-4xl font-semibold tracking-tight text-[#F2F0EF] md:text-5xl">
+              Our Product
+            </h2>
+            <p className="max-w-2xl text-sm leading-relaxed text-zinc-400 md:text-base">
+              Explore the platform building blocks that power our launch-ready digital products.
+            </p>
+          </div>
+
+          <div className="mt-10">
+            <MagicBento
+              textAutoHide={true}
+              enableStars
+              enableSpotlight
+              enableBorderGlow={true}
+              enableTilt={false}
+              enableMagnetism={false}
+              clickEffect
+              spotlightRadius={400}
+              particleCount={30}
+              glowColor="19, 15, 247"
+              disableAnimations={false}
+            />
+          </div>
         </div>
       </section>
     </main>
