@@ -3,6 +3,7 @@
 import { SidebarMenu } from "./components/SidebarMenu";
 import DarkVeil from "./components/DarkVeil";
 import { OriginSection } from "./components/OriginSection";
+import { NexaCallingShowcase } from "./components/NexaCallingShowcase";
 import SpotlightCard from "@/components/SpotlightCard";
 
 import {
@@ -104,16 +105,10 @@ export default function Home() {
         </div>
 
         <div className="mt-24">
-          <div className="mx-auto flex max-w-5xl flex-col items-center gap-4 px-4 text-center">
-            <span className="text-xs uppercase tracking-[0.3em] text-zinc-500">Products</span>
-            <h2 className="text-4xl font-semibold tracking-tight text-[#F2F0EF] md:text-5xl">
-              Our Product
-            </h2>
-            <p className="max-w-2xl text-sm leading-relaxed text-zinc-400 md:text-base">
-              Explore the platform building blocks that power our launch-ready digital products.
-            </p>
-          </div>
+        
 
+
+        <NexaCallingShowcase />
           <div className="mt-10">
             <MagicBento
               textAutoHide={true}
