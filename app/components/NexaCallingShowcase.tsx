@@ -42,7 +42,6 @@ export function NexaCallingShowcase() {
               smart workflows, real-time visibility, and a premium calling experience into one focused product.
             </p>
           </div>
-          
         </div>
 
         <div

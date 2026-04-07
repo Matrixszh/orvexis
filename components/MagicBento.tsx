@@ -1,11 +1,21 @@
 import React, { useRef, useEffect, useState, useCallback } from 'react';
 import { gsap } from 'gsap';
+import {
+  BarChart3,
+  LayoutDashboard,
+  Users,
+  Workflow,
+  PlugZap,
+  ShieldCheck,
+  type LucideIcon
+} from 'lucide-react';
 
 export interface BentoCardProps {
   color?: string;
   title?: string;
   description?: string;
   label?: string;
+  icon?: LucideIcon;
   textAutoHide?: boolean;
   disableAnimations?: boolean;
 }
@@ -38,37 +48,43 @@ const cardData: BentoCardProps[] = [
     color: '#060010',
     title: 'Analytics',
     description: 'Track user behavior',
-    label: 'Insights'
+    label: 'Insights',
+    icon: BarChart3
   },
   {
     color: '#060010',
     title: 'Dashboard',
     description: 'Centralized data view',
-    label: 'Overview'
+    label: 'Overview',
+    icon: LayoutDashboard
   },
   {
     color: '#060010',
     title: 'Collaboration',
     description: 'Work together seamlessly',
-    label: 'Teamwork'
+    label: 'Teamwork',
+    icon: Users
   },
   {
     color: '#060010',
     title: 'Automation',
     description: 'Streamline workflows',
-    label: 'Efficiency'
+    label: 'Efficiency',
+    icon: Workflow
   },
   {
     color: '#060010',
     title: 'Integration',
     description: 'Connect favorite tools',
-    label: 'Connectivity'
+    label: 'Connectivity',
+    icon: PlugZap
   },
   {
     color: '#060010',
     title: 'Security',
     description: 'Enterprise-grade protection',
-    label: 'Protection'
+    label: 'Protection',
+    icon: ShieldCheck
   }
 ];
 
@@ -953,6 +969,13 @@ const MagicBento: React.FC<BentoProps> = ({
                   <div className="card__header flex justify-between gap-3 relative text-white">
                     <span className="card__label text-base">{card.label}</span>
                   </div>
+                  <div className="relative flex flex-1 items-center justify-center py-4">
+                    {card.icon && (
+                      <div className="flex h-14 w-14 items-center justify-center  lg:h-16 lg:w-16">
+                        <card.icon className="h-7 w-7 text-white/80 lg:h-15 lg:w-15" strokeWidth={1.15} />
+                      </div>
+                    )}
+                  </div>
                   <div className="card__content flex flex-col relative text-white">
                     <h3 className={`card__title font-normal text-base m-0 mb-1 ${textAutoHide ? 'text-clamp-1' : ''}`}>
                       {card.title}
@@ -1084,6 +1107,13 @@ const MagicBento: React.FC<BentoProps> = ({
               >
                 <div className="card__header flex justify-between gap-3 relative text-white">
                   <span className="card__label text-base">{card.label}</span>
+                </div>
+                <div className="relative flex flex-1 items-center justify-center py-4">
+                  {card.icon && (
+                    <div className="flex h-14 w-14 items-center justify-center rounded-xl ring-1 ring-white/8 lg:h-16 lg:w-16">
+                      <card.icon className="h-7 w-7 text-white/80 lg:h-9 lg:w-9" strokeWidth={1.15} />
+                    </div>
+                  )}
                 </div>
                 <div className="card__content flex flex-col relative text-white">
                   <h3 className={`card__title font-normal text-base m-0 mb-1 ${textAutoHide ? 'text-clamp-1' : ''}`}>

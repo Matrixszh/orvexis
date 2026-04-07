@@ -2,6 +2,7 @@
 
 import { SidebarMenu } from "./components/SidebarMenu";
 import DarkVeil from "./components/DarkVeil";
+import LightRays from "@/components/LightRays";
 import { OriginSection } from "./components/OriginSection";
 import { NexaCallingShowcase } from "./components/NexaCallingShowcase";
 import SpotlightCard from "@/components/SpotlightCard";
@@ -19,6 +20,7 @@ import {
   DevicePhoneMobileIcon,
 } from "@heroicons/react/24/outline";
 import MagicBento from "@/components/MagicBento";
+
 const cards = [
   {
     title: "Web Application Development",
@@ -40,6 +42,8 @@ const cards = [
   },
 ];
 
+const footerLinks = ["Home", "Services", "Work", "About", "Contact"];
+
 export default function Home() {
   return (
     <main className="bg-black text-zinc-100 overflow-hidden min-h-screen">
@@ -49,7 +53,7 @@ export default function Home() {
         <DarkVeil />
       </section>
 
-      <section className="px-6 py-16 lg:px-12">
+      <section className="px-6 pt-16 lg:px-12">
         <OriginSection />
 
         <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -105,10 +109,7 @@ export default function Home() {
         </div>
 
         <div className="mt-24">
-        
-
-
-        <NexaCallingShowcase />
+          <NexaCallingShowcase />
           <div className="mt-10">
             <MagicBento
               textAutoHide={true}
@@ -125,6 +126,74 @@ export default function Home() {
             />
           </div>
         </div>
+
+        <div className="relative mt-20 h-[600px] overflow-hidden bg-black -mx-6 lg:-mx-12">
+          <LightRays
+            raysOrigin="top-center"
+            raysColor="#130FF7"
+            raysSpeed={1}
+            lightSpread={0.5}
+            rayLength={3}
+            followMouse={true}
+            mouseInfluence={0.1}
+            noiseAmount={0}
+            distortion={0}
+            className="custom-rays"
+            pulsating={false}
+            fadeDistance={1}
+            saturation={1}
+          />
+          <div className="absolute inset-0 z-10 flex items-center justify-center px-6 text-center">
+            <div className="max-w-full space-y-6">
+              <p className="text-xl font-medium text-white/90 md:text-6xl">
+                Want to test the product? 
+              </p>
+              <p className="text-lg font-light text-white/90 md:text-xl">
+                Contact us and experience NexaCalling in action.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4 mt-16">
+                <button className="inline-flex min-w-[150px] items-center justify-center rounded-full border border-white/10 bg-white px-6 py-3 text-sm font-medium text-black transition-all duration-300 hover:scale-[1.02] hover:bg-zinc-100">
+                  View More
+                </button>
+                <button className="inline-flex min-w-[150px] items-center justify-center rounded-full border border-white/10 bg-white/5 px-6 py-3 text-sm font-medium text-white transition-all duration-300 hover:scale-[1.02] hover:bg-white/10">
+                  Contact
+                </button>
+              </div>
+            </div>
+          </div>
+          <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-black via-black/80 to-transparent" />
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-black via-black/85 to-transparent" />
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-black via-black/70 to-transparent" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-black via-black/70 to-transparent" />
+        </div>
+
+        <footer className=" border-t border-white/10 bg-zinc-950 -mx-6 lg:-mx-12">
+          <div className="flex flex-col gap-10 px-6 py-10 md:px-12 lg:flex-row lg:items-end lg:justify-between">
+            <div className="space-y-4">
+              <span className="block text-lg font-semibold uppercase tracking-[0.25em] text-white">
+                ORVEXIS
+              </span>
+              <p className="max-w-xl text-sm leading-7 text-zinc-400">
+                Building launch-ready digital products, communication systems, and premium software
+                experiences that scale with modern teams.
+              </p>
+            </div>
+
+            <div className="flex flex-col gap-6 lg:items-end">
+              <nav className="flex flex-wrap gap-x-6 gap-y-3 text-xs uppercase tracking-[0.25em] text-zinc-400">
+                {footerLinks.map((link) => (
+                  <a key={link} href="#" className="transition-colors duration-300 hover:text-white">
+                    {link}
+                  </a>
+                ))}
+              </nav>
+              <div className="flex flex-col gap-2 text-xs uppercase tracking-[0.25em] text-zinc-500 lg:items-end">
+                <span>Contact@orvexis.com</span>
+                <span>© 2026 Orvexis. All rights reserved.</span>
+              </div>
+            </div>
+          </div>
+        </footer>
       </section>
     </main>
   );
