@@ -87,13 +87,13 @@ export default function ContactPage() {
       <SidebarMenu />
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(rgba(255,255,255,0.06)_1px,transparent_1px)] bg-[size:26px_26px] opacity-[0.08]" />
 
-      <div className="relative mx-auto max-w-7xl px-6 pb-16 pt-10 md:px-10 lg:px-12">
+      <div className="relative mx-auto max-w-full px-6 pb-16 pt-20 md:px-10 lg:px-12">
         <section className="relative overflow-hidden rounded-[32px] border border-white/8 bg-[linear-gradient(180deg,rgba(3,5,12,0.96),rgba(5,8,20,0.96))] px-6 pb-8 pt-20 shadow-[0_0_60px_rgba(19,15,247,0.08)] md:px-8 lg:px-10">
           <div className="pointer-events-none absolute inset-0">
             <LightRays
               raysOrigin="top-center"
               raysColor="#130FF7"
-              raysSpeed={1}
+              raysSpeed={3}
               lightSpread={0.55}
               rayLength={3}
               followMouse={true}
@@ -101,7 +101,7 @@ export default function ContactPage() {
               noiseAmount={0}
               distortion={0}
               pulsating={false}
-              fadeDistance={1}
+              fadeDistance={2}
               saturation={4}
             />
             <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-[#03050c] via-[#03050c]/75 to-transparent" />
