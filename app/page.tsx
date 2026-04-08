@@ -170,7 +170,7 @@ export default function Home() {
           <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-black via-black/70 to-transparent" />
         </div>
 
-        <footer className=" border-t border-white/10 bg-zinc-950 -mx-6 lg:-mx-12">
+        <footer className=" border-t border-white/10 bg-black -mx-6 lg:-mx-12">
           <div className="flex flex-col gap-10 px-6 py-10 md:px-12 lg:flex-row lg:items-end lg:justify-between">
             <div className="space-y-4">
               <Image src="/ologo.png" alt="Orvexis" width={176} height={44} className="h-10 w-auto object-contain" />

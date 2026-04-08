@@ -384,12 +384,12 @@ function UseCaseCard({ title, icon: Icon }: IconItem) {
 
 export default function ProductPage() {
   return (
-    <main className="min-h-screen overflow-hidden bg-[#03050c] text-white">
+    <main className="min-h-screen overflow-hidden bg-black text-white">
       <SidebarMenu />
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(rgba(255,255,255,0.06)_1px,transparent_1px)] bg-[size:26px_26px] opacity-[0.08]" />
+      <div className="pointer-events-none absolute inset-0 bg-black opacity-[0.08]" />
 
-      <div className="relative mx-auto max-w-full px-6   md:px-10 lg:px-12">
-        <section className="relative pb-10 pt-16">
+      <div className="relative mx-auto max-w-full px-6 md:px-10 lg:px-12">
+        <section className="relative max-h-screen pb-10 pt-[10vh]">
           <div className="pointer-events-none absolute inset-y-0 left-1/2 w-screen -translate-x-1/2 overflow-hidden">
             <LightRays
               raysOrigin="top-center"
@@ -398,17 +398,13 @@ export default function ProductPage() {
               lightSpread={0.55}
               rayLength={3}
               followMouse={true}
-              mouseInfluence={0.08}
+              mouseInfluence={0.1}
               noiseAmount={0}
-              distortion={0}
+              distortion={1}
               pulsating={false}
               fadeDistance={1}
               saturation={4}
             />
-            <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-[#03050c] via-[#03050c]/80 to-transparent" />
-            <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#03050c] via-[#03050c]/85 to-transparent" />
-            <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#03050c] via-[#03050c]/75 to-transparent" />
-            <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-[#03050c] via-[#03050c]/75 to-transparent" />
           </div>
 
           <div className="relative grid gap-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-center">
@@ -447,7 +443,7 @@ export default function ProductPage() {
           </div>
         </section>
 
-        <section className="grid gap-4 py-4 md:grid-cols-2 xl:grid-cols-4">
+        <section className="pt-20 grid gap-4 py-4 md:grid-cols-2 xl:grid-cols-4">
           {highlights.map((item) => (
             <FeatureHighlight key={item.title} {...item} />
           ))}
@@ -500,7 +496,7 @@ export default function ProductPage() {
           </div>
         </section>
 
-        <footer className="border-t border-white/10 bg-zinc-950 -mx-6 lg:-mx-12">
+        <footer className="border-t border-white/10 bg-black -mx-6 lg:-mx-12">
           <div className="flex flex-col gap-10 px-6 py-10 md:px-12 lg:flex-row lg:items-end lg:justify-between">
             <div className="space-y-4">
               <Image src="/ologo.png" alt="Orvexis" width={176} height={44} className="h-10 w-auto object-contain" />
