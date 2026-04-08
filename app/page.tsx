@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { SidebarMenu } from "./components/SidebarMenu";
 import DarkVeil from "./components/DarkVeil";
 import DotGrid from "@/components/DotGrid";
@@ -43,7 +44,11 @@ const cards = [
   },
 ];
 
-const footerLinks = ["Home", "Services", "Work", "About", "Contact"];
+const footerLinks = [
+  { label: "Home", href: "/" },
+  { label: "Product", href: "/product" },
+  { label: "Contact", href: "/contact" },
+];
 
 export default function Home() {
   return (
@@ -165,9 +170,8 @@ export default function Home() {
             </div>
           </div>
           <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-black via-black/80 to-transparent" />
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-black via-black/85 to-transparent" />
-          <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-black via-black/70 to-transparent" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-black via-black/70 to-transparent" />
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-14 bg-gradient-to-r from-black via-black/70 to-transparent" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-14 bg-gradient-to-l from-black via-black/70 to-transparent" />
         </div>
 
         <footer className=" border-t border-white/10 bg-black -mx-6 lg:-mx-12">
@@ -183,9 +187,9 @@ export default function Home() {
             <div className="flex flex-col gap-6 lg:items-end">
               <nav className="flex flex-wrap gap-x-6 gap-y-3 text-xs uppercase tracking-[0.25em] text-zinc-400">
                 {footerLinks.map((link) => (
-                  <a key={link} href="#" className="transition-colors duration-300 hover:text-white">
-                    {link}
-                  </a>
+                  <Link key={link.label} href={link.href} className="transition-colors duration-300 hover:text-white">
+                    {link.label}
+                  </Link>
                 ))}
               </nav>
               <div className="flex flex-col gap-2 text-xs uppercase tracking-[0.25em] text-zinc-500 lg:items-end">

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Image from "next/image";
 import {
   ArrowRight,
@@ -13,6 +14,7 @@ import {
 } from "lucide-react";
 import LightRays from "@/components/LightRays";
 import { SidebarMenu } from "../components/SidebarMenu";
+import ContactForm from "../components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact | Orvexis",
@@ -62,7 +64,11 @@ const faqItems = [
   "Can you explain your pricing model?",
 ];
 
-const footerLinks = ["Home", "Services", "Work", "About", "Contact"];
+const footerLinks = [
+  { label: "Home", href: "/" },
+  { label: "Product", href: "/product" },
+  { label: "Contact", href: "/contact" },
+];
 
 function ContactInfoCard({ title, value, detail, icon: Icon }: ContactCard) {
   return (
@@ -188,34 +194,7 @@ export default function ContactPage() {
                 We’d love to hear about your project. Fill out the form and our team will get back to you soon.
               </p>
             </div>
-            <div className="mt-8 space-y-5">
-              {[
-                { label: "Full Name", placeholder: "Enter your name" },
-                { label: "Email Address", placeholder: "Enter your email" },
-                { label: "Company", placeholder: "Enter your company" },
-              ].map((field) => (
-                <label key={field.label} className="block space-y-2">
-                  <span className="text-sm font-medium text-zinc-200">{field.label}</span>
-                  <input
-                    type="text"
-                    placeholder={field.placeholder}
-                    className="h-14 w-full rounded-2xl border border-white/8 bg-[#060a16] px-4 text-sm text-white outline-none transition-colors duration-300 placeholder:text-zinc-500 focus:border-[#130FF7]/50"
-                  />
-                </label>
-              ))}
-              <label className="block space-y-2">
-                <span className="text-sm font-medium text-zinc-200">Message</span>
-                <textarea
-                  placeholder="Tell us about your project or how we can help..."
-                  rows={5}
-                  className="w-full rounded-2xl border border-white/8 bg-[#060a16] px-4 py-4 text-sm text-white outline-none transition-colors duration-300 placeholder:text-zinc-500 focus:border-[#130FF7]/50"
-                />
-              </label>
-              <button className="inline-flex w-full items-center justify-center gap-3 rounded-2xl bg-[#130FF7] px-6 py-4 text-sm font-medium text-white shadow-[0_0_30px_rgba(19,15,247,0.25)]">
-                <Send className="h-4 w-4" strokeWidth={1.5} />
-                Send Message
-              </button>
-            </div>
+            <ContactForm />
           </div>
 
           <div className="space-y-6">
@@ -318,9 +297,9 @@ export default function ContactPage() {
             <div className="flex flex-col gap-6 lg:items-end">
               <nav className="flex flex-wrap gap-x-6 gap-y-3 text-xs uppercase tracking-[0.25em] text-zinc-400">
                 {footerLinks.map((link) => (
-                  <a key={link} href="#" className="transition-colors duration-300 hover:text-white">
-                    {link}
-                  </a>
+                  <Link key={link.label} href={link.href} className="transition-colors duration-300 hover:text-white">
+                    {link.label}
+                  </Link>
                 ))}
               </nav>
               <div className="flex flex-col gap-2 text-xs uppercase tracking-[0.25em] text-zinc-500 lg:items-end">

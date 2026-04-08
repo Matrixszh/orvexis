@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Image from "next/image";
 import {
   ArrowRight,
@@ -68,15 +69,15 @@ const capabilities = [
     panel: "workflow",
   },
   {
-    title: "Text, Image & Voice Intelligence",
-    description: "Interact with AI using text, images, and voice commands.",
-    points: ["Chat & voice commands", "Image recognition", "Smart responses"],
+    title: "Text, Solutions & Voice Intelligence",
+    description: "Interact with AI using calls, emails, and voice commands.",
+    points: ["Chat & voice commands", "Problem recognition", "Smart responses"],
     panel: "assistant",
   },
   {
     title: "Autonomous AI Agents",
     description: "Deploy AI agents that can think, learn, and act independently.",
-    points: ["Self-learning agents", "Task execution", "Feedback loops"],
+    points: ["Sales agents", "Task execution", "Feedback loops"],
     panel: "agents",
   },
 ];
@@ -86,7 +87,6 @@ const useCases: IconItem[] = [
   { title: "Sales AI Assistant", icon: BarChart3 },
   { title: "Marketing Optimization", icon: Megaphone },
   { title: "Data Analysis", icon: PieChart },
-  { title: "Fraud Detection", icon: ShieldCheck },
   { title: "Operations Automation", icon: Cog },
 ];
 
@@ -97,7 +97,11 @@ const miniStats = [
   { label: "Cost Saved", value: "$24,560", delta: "+15.7%" },
 ];
 
-const footerLinks = ["Home", "Services", "Work", "About", "Contact"];
+const footerLinks = [
+  { label: "Home", href: "/" },
+  { label: "Product", href: "/product" },
+  { label: "Contact", href: "/contact" },
+];
 
 function DashboardPreview() {
   return (
@@ -221,9 +225,24 @@ function DashboardPreview() {
 
 function FeatureHighlight({ title, description, icon: Icon }: IconItem) {
   return (
-    <div className="rounded-2xl border border-white/8 bg-white/[0.03] p-5 shadow-[0_0_30px_rgba(59,130,246,0.08)]">
-      <div className="flex items-start gap-4">
-        <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#130FF7]/12 text-[#c7c6ff]">
+    <div
+      className="group relative overflow-hidden rounded-3xl border p-5 shadow-[0_18px_60px_rgba(0,0,0,0.95)] transition-transform duration-300 hover:-translate-y-0.5 backdrop-blur-2xl backdrop-saturate-150"
+      style={{
+        borderColor: "rgba(19,15,247,0.25)",
+        background:
+          "linear-gradient(135deg, rgba(19,15,247,0.35), rgba(19,15,247,0.16) 35%, rgba(0,0,0,0.78) 100%)",
+      }}
+    >
+      <div
+        className="pointer-events-none absolute inset-0 rounded-3xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+        style={{
+          background:
+            "radial-gradient(420px circle at 20% 20%, rgba(19,15,247,0.22) 0%, rgba(19,15,247,0.1) 35%, transparent 70%)",
+          mixBlendMode: "screen",
+        }}
+      />
+      <div className="relative flex items-start gap-4">
+        <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#130FF7]/15 text-[#c7c6ff] ring-1 ring-white/10">
           <Icon className="h-5 w-5" strokeWidth={1.5} />
         </div>
         <div className="space-y-1">
@@ -231,6 +250,19 @@ function FeatureHighlight({ title, description, icon: Icon }: IconItem) {
           <p className="text-sm leading-6 text-zinc-400">{description}</p>
         </div>
       </div>
+      <div
+        className="pointer-events-none absolute inset-0 rounded-3xl"
+        style={{
+          WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+          WebkitMaskComposite: "xor",
+          mask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+          maskComposite: "exclude",
+          padding: "2px",
+          background:
+            "radial-gradient(320px circle at 30% 30%, rgba(19,15,247,0.3) 0%, rgba(19,15,247,0.14) 30%, transparent 60%)",
+          opacity: 0.4,
+        }}
+      />
     </div>
   );
 }
@@ -373,11 +405,41 @@ function CapabilitySection({
 
 function UseCaseCard({ title, icon: Icon }: IconItem) {
   return (
-    <div className="rounded-2xl border border-white/8 bg-white/[0.03] p-6 text-center shadow-[0_0_24px_rgba(79,70,229,0.08)]">
-      <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-[#130FF7]/12 text-[#c7c6ff]">
-        <Icon className="h-5 w-5" strokeWidth={1.5} />
+    <div
+      className="group relative overflow-hidden rounded-3xl border p-6 text-center shadow-[0_18px_60px_rgba(0,0,0,0.95)] transition-transform duration-300 hover:-translate-y-0.5 backdrop-blur-2xl backdrop-saturate-150"
+      style={{
+        borderColor: "rgba(19,15,247,0.25)",
+        background:
+          "linear-gradient(135deg, rgba(19,15,247,0.35), rgba(19,15,247,0.16) 35%, rgba(0,0,0,0.78) 100%)",
+      }}
+    >
+      <div
+        className="pointer-events-none absolute inset-0 rounded-3xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+        style={{
+          background:
+            "radial-gradient(360px circle at 50% 25%, rgba(19,15,247,0.22) 0%, rgba(19,15,247,0.1) 35%, transparent 70%)",
+          mixBlendMode: "screen",
+        }}
+      />
+      <div className="relative">
+        <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-[#130FF7]/15 text-[#c7c6ff] ring-1 ring-white/10">
+          <Icon className="h-5 w-5" strokeWidth={1.5} />
+        </div>
+        <p className="mt-4 text-sm leading-6 text-zinc-200">{title}</p>
       </div>
-      <p className="mt-4 text-sm leading-6 text-zinc-200">{title}</p>
+      <div
+        className="pointer-events-none absolute inset-0 rounded-3xl"
+        style={{
+          WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+          WebkitMaskComposite: "xor",
+          mask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+          maskComposite: "exclude",
+          padding: "2px",
+          background:
+            "radial-gradient(300px circle at 50% 35%, rgba(19,15,247,0.28) 0%, rgba(19,15,247,0.12) 30%, transparent 60%)",
+          opacity: 0.35,
+        }}
+      />
     </div>
   );
 }
@@ -438,8 +500,28 @@ export default function ProductPage() {
                 </div>
               </div>
             </div>
-
-            <DashboardPreview />
+            <div className="relative overflow-hidden rounded-[28px] border border-white/10 bg-black p-1 shadow-[0_10px_40px_rgba(0,0,0,0.35)]">
+              <div
+                className="pointer-events-none absolute -inset-10 z-0 blur-3xl"
+                style={{
+                  background: `
+                    radial-gradient(720px circle at 60% 40%, rgba(19,15,247,0.38) 0%, rgba(19,15,247,0.12) 40%, transparent 75%),
+                    radial-gradient(520px circle at 40% 70%, rgba(19,15,247,0.18) 0%, transparent 70%)
+                  `,
+                  mixBlendMode: "screen",
+                }}
+              />
+              <div className="relative z-10 overflow-hidden rounded-[22px] border border-white/10 bg-black">
+                <Image
+                  src="/nexah.png"
+                  alt="NexaCalling product hero"
+                  width={1600}
+                  height={1000}
+                  className="h-[320px] w-full object-cover transition-transform duration-500 md:h-[480px] lg:h-[50vh] lg:max-h-[760px]"
+                  priority
+                />
+              </div>
+            </div>
           </div>
         </section>
 
@@ -509,9 +591,9 @@ export default function ProductPage() {
             <div className="flex flex-col gap-6 lg:items-end">
               <nav className="flex flex-wrap gap-x-6 gap-y-3 text-xs uppercase tracking-[0.25em] text-zinc-400">
                 {footerLinks.map((link) => (
-                  <a key={link} href="#" className="transition-colors duration-300 hover:text-white">
-                    {link}
-                  </a>
+                  <Link key={link.label} href={link.href} className="transition-colors duration-300 hover:text-white">
+                    {link.label}
+                  </Link>
                 ))}
               </nav>
               <div className="flex flex-col gap-2 text-xs uppercase tracking-[0.25em] text-zinc-500 lg:items-end">

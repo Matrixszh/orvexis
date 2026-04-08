@@ -125,3 +125,10 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Hide all cursors and the custom cursor on coarse pointer (touch) devices */
+@media (pointer: coarse), (hover: none) {
+  html, body, * { cursor: none !important; }
+  .target-cursor-root,
+  .target-cursor-corner { display: none !important; }
+}
