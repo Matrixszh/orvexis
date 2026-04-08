@@ -7,9 +7,7 @@ import { useState } from "react";
 const navLinks = [
   { label: "Home", href: "/" },
   { label: "Product", href: "/product" },
-  { label: "Work", href: "#" },
-  { label: "About", href: "#" },
-  { label: "Contact", href: "#" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export function SidebarMenu() {
