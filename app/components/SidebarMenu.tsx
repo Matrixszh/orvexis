@@ -1,10 +1,12 @@
 "use client";
 
+import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 const navLinks = [
-  { label: "Home", href: "#" },
-  { label: "Services", href: "#" },
+  { label: "Home", href: "/" },
+  { label: "Product", href: "/product" },
   { label: "Work", href: "#" },
   { label: "About", href: "#" },
   { label: "Contact", href: "#" },
@@ -16,10 +18,10 @@ export function SidebarMenu() {
   return (
     <>
       {/* Top bar */}
-      <header className="flex items-center bg-zinc-950 justify-between px-6 py-6 md:px-12">
-        <span className="text-white text-lg tracking-[0.25em] font-semibold uppercase">
-          ORVEXIS
-        </span>
+      <header className="absolute inset-x-0 top-0 z-30 flex items-center justify-between bg-transparent px-6 py-6 md:px-12">
+        <Link href="/" className="flex items-center">
+          <Image src="/ologo.png" alt="Orvexis" width={156} height={40} className="h-9 w-auto object-contain" priority />
+        </Link>
 
         <button
           onClick={() => setOpen(true)}

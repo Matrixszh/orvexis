@@ -1,8 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import { SidebarMenu } from "./components/SidebarMenu";
 import DarkVeil from "./components/DarkVeil";
-import LightRays from "@/components/LightRays";
+import DotGrid from "@/components/DotGrid";
 import { OriginSection } from "./components/OriginSection";
 import { NexaCallingShowcase } from "./components/NexaCallingShowcase";
 import SpotlightCard from "@/components/SpotlightCard";
@@ -128,21 +129,23 @@ export default function Home() {
         </div>
 
         <div className="relative mt-20 h-[600px] overflow-hidden bg-black -mx-6 lg:-mx-12">
-          <LightRays
-            raysOrigin="top-center"
-            raysColor="#130FF7"
-            raysSpeed={1}
-            lightSpread={0.5}
-            rayLength={3}
-            followMouse={true}
-            mouseInfluence={0.1}
-            noiseAmount={0}
-            distortion={0}
-            className="custom-rays"
-            pulsating={false}
-            fadeDistance={1}
-            saturation={1}
-          />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="relative h-[1080px] w-[100vw] max-w-full">
+              <DotGrid
+                dotSize={6}
+                gap={46}
+                baseColor="#130ff7"
+                activeColor="#ffffff"
+                proximity={150}
+                speedTrigger={190}
+                shockRadius={200}
+                shockStrength={13}
+                maxSpeed={5000}
+                resistance={750}
+                returnDuration={1.5}
+              />
+            </div>
+          </div>
           <div className="absolute inset-0 z-10 flex items-center justify-center px-6 text-center">
             <div className="max-w-full space-y-6">
               <p className="text-xl font-medium text-white/90 md:text-6xl">
@@ -170,9 +173,7 @@ export default function Home() {
         <footer className=" border-t border-white/10 bg-zinc-950 -mx-6 lg:-mx-12">
           <div className="flex flex-col gap-10 px-6 py-10 md:px-12 lg:flex-row lg:items-end lg:justify-between">
             <div className="space-y-4">
-              <span className="block text-lg font-semibold uppercase tracking-[0.25em] text-white">
-                ORVEXIS
-              </span>
+              <Image src="/ologo.png" alt="Orvexis" width={176} height={44} className="h-10 w-auto object-contain" />
               <p className="max-w-xl text-sm leading-7 text-zinc-400">
                 Building launch-ready digital products, communication systems, and premium software
                 experiences that scale with modern teams.
