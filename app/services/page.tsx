@@ -11,6 +11,9 @@ import {
   PlugZap,
 } from "lucide-react";
 import { SidebarMenu } from "../components/SidebarMenu";
+import { DevicePhoneMobileIcon } from "@heroicons/react/16/solid";
+import RippleGrid from "@/components/RippleGrid";
+import FaqAccordion from "../components/FaqAccordion";
 
 export const metadata: Metadata = {
   title: "Services | Orvexis",
@@ -20,21 +23,21 @@ export const metadata: Metadata = {
 const footerLinks = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
-  { label: "Products", href: "/products" },
+  { label: "Product", href: "/product" },
   { label: "Contact", href: "/contact" },
 ];
 
 const solutions = [
   {
-    title: "AI Chatbots",
-    desc: "Intelligent conversations that capture leads and provide 24/7 support.",
-    icon: MessageSquare,
-  },
-  {
-    title: "AI Voice Agents",
-    desc: "Natural-sounding voice agents that handle calls, book appointments, and resolve issues.",
-    icon: PhoneCall,
-  },
+  title: "Web Solutions",
+  desc:
+    "Build scalable and high-performance web solutions tailored to your business needs, including custom CRM, ERP, and inventory management systems designed to streamline operations, improve efficiency, and support growth.",
+  icon: DevicePhoneMobileIcon,
+},
+  { title: "Custom Solutions",
+  desc:"Develop fully tailored digital solutions to meet unique business requirements, from advanced automation tools to bespoke platforms that solve complex challenges and adapt as your business evolves.",
+  icon: DevicePhoneMobileIcon,
+},
   {
     title: "Custom AI Agents",
     desc: "Tailored AI solutions that automate your unique business processes end-to-end.",
@@ -52,41 +55,52 @@ export default function ServicesPage() {
     <main className="min-h-screen overflow-hidden bg-black text-white">
       <SidebarMenu />
 
-      <div className="relative mx-auto max-w-full pb-16 ">
+      <div className="relative mx-auto max-w-full pt-16 pb-16 ">
         {/* Hero */}
-        <section className="relative overflow-hidden border border-white/10 bg-[linear-gradient(180deg,rgba(3,5,12,0.96),rgba(5,8,20,0.96))] px-6 md:px-12 pb-16 pt-20 shadow-[0_0_60px_rgba(19,15,247,0.08)] ">
+        <section className="relative overflow-hidden  bg-black px-6 md:px-12 pb-24 pt-24  ">
           <div className="pointer-events-none absolute inset-0">
-            <div
-              className="absolute -inset-10 blur-3xl"
-              style={{
-                background:
-                  "radial-gradient(820px circle at 25% 20%, rgba(19,15,247,0.28) 0%, transparent 60%), radial-gradient(620px circle at 75% 40%, rgba(19,15,247,0.18) 0%, transparent 65%)",
-                mixBlendMode: "screen",
-              }}
-            />
+            <div className="absolute inset-0">
+              <div className="absolute inset-0 bg-black" />
+              <div className="absolute inset-0">
+                <RippleGrid
+                  enableRainbow={false}
+                  gridColor="#130ff7"
+                  rippleIntensity={0.05}
+                  gridSize={10}
+                  gridThickness={20}
+                  fadeDistance={2}
+                  vignetteStrength={2}
+                  glowIntensity={1.1}
+                  opacity={1}
+                  gridRotation={0}
+                  mouseInteraction={true}
+                  mouseInteractionRadius={1}
+                />
+              </div>
+            </div>
           </div>
-          <div className="grid gap-12 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-center">
-            <div className="space-y-8">
-              
+          <div className="relative z-10 flex flex-col items-center text-center gap-8">
+            <div className="space-y-8 max-w-3xl">
+             
               <div className="space-y-4">
-                <h1 className="max-w-xl text-5xl font-semibold leading-[1.05] tracking-tight md:text-7xl">
-                  AI That Works. Results That Scale.
+                <h1 className="text-5xl font-semibold leading-[1.05] tracking-tight md:text-7xl">
+                  Solutions That Work. Results That Scale.
                 </h1>
-                <p className="max-w-xl text-lg leading-8 text-zinc-300">
+                <p className="text-lg leading-8 text-zinc-300">
                   We build intelligent systems that automate processes, unlock insights, and help your business grow faster.
                 </p>
               </div>
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap justify-center gap-4">
                 <button className="inline-flex items-center gap-3 rounded-2xl bg-[#130FF7] px-6 py-4 text-sm font-medium text-white shadow-[0_0_30px_rgba(19,15,247,0.3)]">
                   Start Your Journey
                   <ArrowRight className="h-4 w-4" strokeWidth={1.5} />
                 </button>
                 <button className="inline-flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.04] px-6 py-4 text-sm font-medium text-white">
                   <PlayCircle className="h-4 w-4" strokeWidth={1.5} />
-                  Watch Demo
+                  Details
                 </button>
               </div>
-              <div className="flex flex-wrap gap-6 text-sm text-zinc-400">
+              <div className="flex flex-wrap justify-center gap-6 text-sm text-zinc-400">
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="h-4 w-4 text-[#b4b2ff]" strokeWidth={1.5} />
                   1,000+ Businesses Trust Us
@@ -99,28 +113,6 @@ export default function ServicesPage() {
                   <CheckCircle2 className="h-4 w-4 text-[#b4b2ff]" strokeWidth={1.5} />
                   40% Average Cost Savings
                 </div>
-              </div>
-            </div>
-
-            <div className="relative overflow-hidden rounded-[28px] border border-white/10 bg-black p-2 shadow-[0_10px_40px_rgba(0,0,0,0.35)]">
-              <div
-                className="pointer-events-none absolute -inset-10 blur-3xl"
-                style={{
-                  background:
-                    "radial-gradient(700px circle at 60% 45%, rgba(19,15,247,0.34) 0%, transparent 70%)",
-                  mixBlendMode: "screen",
-                }}
-              />
-              <div className="relative overflow-hidden rounded-[22px] border border-white/10 bg-black">
-                <Image
-                  src="/nexah.png"
-                  alt="Service overview"
-                  width={1600}
-                  height={1000}
-                  className="h-[320px] w-full object-cover md:h-[480px] lg:h-[58vh] lg:max-h-[760px]"
-                  priority
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
               </div>
             </div>
           </div>
@@ -222,23 +214,35 @@ export default function ServicesPage() {
         <section className="grid px-10 gap-6 py-6 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
           <div className="rounded-[28px] border border-white/10 bg-white/[0.03] p-6 shadow-[0_0_40px_rgba(19,15,247,0.08)]">
             <h3 className="text-2xl font-semibold text-white">Frequently Asked Questions</h3>
-            <div className="mt-4 grid gap-4 md:grid-cols-2">
-              {[
-                "What services do you offer?",
-                "Do you offer ongoing support?",
-                "How long does integration take?",
-                "Can you integrate with our tools?",
-                "Is my data secure?",
-                "How do you price projects?",
-              ].map((item) => (
-                <button
-                  key={item}
-                  className="flex items-center justify-between rounded-2xl border border-white/8 bg-white/[0.03] px-5 py-4 text-left text-sm text-zinc-200 transition-colors duration-300 hover:border-[#130FF7]/35 hover:bg-white/[0.05]"
-                >
-                  <span>{item}</span>
-                  <span className="text-zinc-500">+</span>
-                </button>
-              ))}
+            <div className="mt-4">
+              <FaqAccordion
+                items={[
+                  {
+                    q: "What services do you offer?",
+                    a: "We design and build AI chatbots, voice agents, custom automation, and integrations tailored to your workflows.",
+                  },
+                  {
+                    q: "Do you offer ongoing support?",
+                    a: "Yes. We provide support and maintenance with monitoring, improvements, and SLAs on request.",
+                  },
+                  {
+                    q: "How long does integration take?",
+                    a: "Most pilots are delivered within 2–4 weeks depending on scope and data availability.",
+                  },
+                  {
+                    q: "Can you integrate with our tools?",
+                    a: "We integrate with CRMs, ticketing, analytics, and internal systems via APIs and webhooks.",
+                  },
+                  {
+                    q: "Is my data secure?",
+                    a: "We follow security best practices with encrypted transport and storage and can deploy in your cloud.",
+                  },
+                  {
+                    q: "How do you price projects?",
+                    a: "We offer fixed-scope pilots and ongoing plans. Pricing depends on complexity and usage.",
+                  },
+                ]}
+              />
             </div>
           </div>
           <div className="rounded-[28px] border border-[#130FF7]/20 bg-[linear-gradient(90deg,rgba(19,15,247,0.2),rgba(19,15,247,0.1),rgba(255,255,255,0.03))] p-8 shadow-[0_0_50px_rgba(19,15,247,0.12)]">

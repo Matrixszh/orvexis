@@ -31,11 +31,11 @@ const cards = [
     icon: CodeBracketIcon,
   },
   {
-    title: "Mobile Application Development",
-    description:
-      "Build robust Android and iOS applications that deliver reliable performance and seamless user experiences.",
-    icon: DevicePhoneMobileIcon,
-  },
+  title: "AI-Driven Solutions",
+  description:
+    "Leverage cutting-edge artificial intelligence to automate processes, enhance decision-making, and deliver personalized user experiences through smart, data-driven systems.",
+  icon: DevicePhoneMobileIcon,
+},
   {
     title: "Custom Software Solutions",
     description:

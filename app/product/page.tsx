@@ -547,7 +547,7 @@ export default function ProductPage() {
 
         <section className="py-10">
           <h2 className="mb-8 text-center text-3xl font-semibold text-white">Popular Use Cases</h2>
-          <div className="grid gap-4 md:grid-cols-3 xl:grid-cols-6">
+          <div className="grid gap-4 md:grid-cols-3 xl:grid-cols-5 ">
             {useCases.map((useCase) => (
               <UseCaseCard key={useCase.title} {...useCase} />
             ))}
