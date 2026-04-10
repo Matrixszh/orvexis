@@ -5,6 +5,7 @@ import Link from "next/link";
 import { SidebarMenu } from "./components/SidebarMenu";
 import DarkVeil from "./components/DarkVeil";
 import DotGrid from "@/components/DotGrid";
+import UIButton from "./components/UIButton";
 import { OriginSection } from "./components/OriginSection";
 import { NexaCallingShowcase } from "./components/NexaCallingShowcase";
 import SpotlightCard from "@/components/SpotlightCard";
@@ -161,12 +162,12 @@ export default function Home() {
                 Contact us and experience NexaCalling in action.
               </p>
               <div className="flex flex-wrap justify-center gap-4 mt-16">
-                <button className="inline-flex min-w-[150px] items-center justify-center rounded-full border border-white/10 bg-white px-6 py-3 text-sm font-medium text-black transition-all duration-300 hover:scale-[1.02] hover:bg-zinc-100">
+                <UIButton href="/product" className="min-w-[180px] bg-white text-black border border-white/10 hover:bg-zinc-100">
                   View More
-                </button>
-                <button className="inline-flex min-w-[150px] items-center justify-center rounded-full border border-white/10 bg-white/5 px-6 py-3 text-sm font-medium text-white transition-all duration-300 hover:scale-[1.02] hover:bg-white/10">
+                </UIButton>
+                <UIButton href="/contact" className="min-w-[180px] bg-white/5 text-white border border-white/10 hover:bg-white/10">
                   Contact
-                </button>
+                </UIButton>
               </div>
             </div>
           </div>

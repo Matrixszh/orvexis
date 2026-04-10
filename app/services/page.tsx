@@ -14,6 +14,7 @@ import { SidebarMenu } from "../components/SidebarMenu";
 import { DevicePhoneMobileIcon } from "@heroicons/react/16/solid";
 import RippleGrid from "@/components/RippleGrid";
 import FaqAccordion from "../components/FaqAccordion";
+import UIButton from "../components/UIButton";
 
 export const metadata: Metadata = {
   title: "Services | Orvexis",
@@ -91,14 +92,12 @@ export default function ServicesPage() {
                 </p>
               </div>
               <div className="flex flex-wrap justify-center gap-4">
-                <button className="inline-flex items-center gap-3 rounded-2xl bg-[#130FF7] px-6 py-4 text-sm font-medium text-white shadow-[0_0_30px_rgba(19,15,247,0.3)]">
+                <UIButton href="/product" className="bg-[#130FF7] text-white border border-[#130FF7]/30 shadow-[0_0_30px_rgba(19,15,247,0.3)]">
                   Start Your Journey
-                  <ArrowRight className="h-4 w-4" strokeWidth={1.5} />
-                </button>
-                <button className="inline-flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.04] px-6 py-4 text-sm font-medium text-white">
-                  <PlayCircle className="h-4 w-4" strokeWidth={1.5} />
+                </UIButton>
+                <UIButton href="/contact" className="border border-white/10 bg-white/[0.04] text-white">
                   Details
-                </button>
+                </UIButton>
               </div>
               <div className="flex flex-wrap justify-center gap-6 text-sm text-zinc-400">
                 <div className="flex items-center gap-2">
@@ -254,14 +253,12 @@ export default function ServicesPage() {
                 </p>
               </div>
               <div className="flex flex-wrap gap-4">
-                <button className="inline-flex items-center gap-3 rounded-2xl bg-[#130FF7] px-6 py-4 text-sm font-medium text-white shadow-[0_0_30px_rgba(19,15,247,0.3)]">
+                <UIButton href="/contact" className="bg-[#130FF7] text-white border border-[#130FF7]/30 shadow-[0_0_30px_rgba(19,15,247,0.3)]">
                   Start Free Trial
-                  <ArrowRight className="h-4 w-4" strokeWidth={1.5} />
-                </button>
-                <button className="inline-flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.04] px-6 py-4 text-sm font-medium text-white">
+                </UIButton>
+                <UIButton href="/contact" className="border border-white/10 bg-white/[0.04] text-white">
                   Book a Demo
-                  <PlayCircle className="h-4 w-4" strokeWidth={1.5} />
-                </button>
+                </UIButton>
               </div>
             </div>
           </div>

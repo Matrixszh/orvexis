@@ -26,6 +26,7 @@ import {
 } from "lucide-react";
 import LightRays from "@/components/LightRays";
 import { SidebarMenu } from "../components/SidebarMenu";
+import UIButton from "../components/UIButton";
 
 export const metadata: Metadata = {
   title: "Product | Orvexis",
@@ -481,14 +482,12 @@ export default function ProductPage() {
                 </p>
               </div>
               <div className="flex flex-wrap gap-4">
-                <button className="inline-flex items-center gap-3 rounded-2xl bg-[#130FF7] px-6 py-4 text-sm font-medium text-white shadow-[0_0_30px_rgba(19,15,247,0.3)]">
+                <UIButton href="/contact" className="bg-[#130FF7] text-white border border-[#130FF7]/30 shadow-[0_0_30px_rgba(19,15,247,0.3)]">
                   Start Now
-                  <ArrowRight className="h-4 w-4" strokeWidth={1.5} />
-                </button>
-                <button className="inline-flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.03] px-6 py-4 text-sm font-medium text-white">
-                  <PlayCircle className="h-4 w-4" strokeWidth={1.5} />
+                </UIButton>
+                <UIButton href="/contact" className="border border-white/10 bg-white/[0.03] text-white">
                   Contact Us
-                </button>
+                </UIButton>
               </div>
               <div className="flex flex-wrap gap-6 text-sm text-zinc-400">
                 <div className="flex items-center gap-2">
@@ -566,14 +565,12 @@ export default function ProductPage() {
                 </p>
               </div>
               <div className="flex flex-wrap gap-4">
-                <button className="inline-flex items-center gap-3 rounded-2xl bg-[#130FF7] px-6 py-4 text-sm font-medium text-white shadow-[0_0_30px_rgba(19,15,247,0.3)]">
+                <UIButton href="/contact" className="bg-[#130FF7] text-white border border-[#130FF7]/30 shadow-[0_0_30px_rgba(19,15,247,0.3)]">
                   Start Free Trial
-                  <ArrowRight className="h-4 w-4" strokeWidth={1.5} />
-                </button>
-                <button className="inline-flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.04] px-6 py-4 text-sm font-medium text-white">
+                </UIButton>
+                <UIButton href="/contact" className="border border-white/10 bg-white/[0.04] text-white">
                   Book a Demo
-                  <ChevronRight className="h-4 w-4" strokeWidth={1.5} />
-                </button>
+                </UIButton>
               </div>
             </div>
           </div>

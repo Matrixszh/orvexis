@@ -15,6 +15,7 @@ import {
 import LightRays from "@/components/LightRays";
 import { SidebarMenu } from "../components/SidebarMenu";
 import ContactForm from "../components/ContactForm";
+import UIButton from "../components/UIButton";
 
 export const metadata: Metadata = {
   title: "Contact | Orvexis",
@@ -272,14 +273,12 @@ export default function ContactPage() {
                 </p>
               </div>
               <div className="flex flex-wrap gap-4">
-                <button className="inline-flex items-center gap-3 rounded-2xl bg-[#130FF7] px-6 py-4 text-sm font-medium text-white shadow-[0_0_30px_rgba(19,15,247,0.3)]">
+                <UIButton href="/contact" className="bg-[#130FF7] text-white border border-[#130FF7]/30 shadow-[0_0_30px_rgba(19,15,247,0.3)]">
                   Schedule Call
-                  <Phone className="h-4 w-4" strokeWidth={1.5} />
-                </button>
-                <button className="inline-flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.04] px-6 py-4 text-sm font-medium text-white">
+                </UIButton>
+                <UIButton href="/contact" className="border border-white/10 bg-white/[0.04] text-white">
                   Contact Sales
-                  <Mail className="h-4 w-4" strokeWidth={1.5} />
-                </button>
+                </UIButton>
               </div>
             </div>
           </div>
