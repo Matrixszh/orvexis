@@ -92,11 +92,11 @@ export default function ServicesPage() {
                 </p>
               </div>
               <div className="flex flex-wrap justify-center gap-4">
-                <UIButton href="/product" className="bg-[#130FF7] text-white border border-[#130FF7]/30 shadow-[0_0_30px_rgba(19,15,247,0.3)]">
+                <UIButton href="/contact" className="bg-[#130FF7] text-white border border-[#130FF7]/30 shadow-[0_0_30px_rgba(19,15,247,0.3)]">
                   Start Your Journey
                 </UIButton>
-                <UIButton href="/contact" className="border border-white/10 bg-white/[0.04] text-white">
-                  Details
+                <UIButton href="#info" className="border border-white/10 bg-white/[0.04] text-white">
+                  Explore Services
                 </UIButton>
               </div>
               <div className="flex flex-wrap justify-center gap-6 text-sm text-zinc-400">
@@ -118,7 +118,7 @@ export default function ServicesPage() {
         </section>
 
         {/* Core Solutions */}
-        <section className="py-10 px-10">
+        <section className="py-10 px-10" id="info">
           <h2 className="mb-6 text-center text-3xl font-semibold text-white">Our Core Solutions</h2>
           <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
             {solutions.map(({ title, desc, icon: Icon }) => (

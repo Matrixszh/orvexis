@@ -99,18 +99,7 @@ export default function Home() {
                   </p>
                 </div>
 
-                <button
-                  className="
-                    mt-1 inline-flex items-center gap-2 self-start rounded-full
-                    bg-blue-700/30 px-4 py-1.5 text-xs font-medium
-                    text-blue-100 ring-1 ring-blue-400/40
-                    hover:bg-blue-600/45 hover:ring-blue-300/70
-                    transition-all duration-300
-                  "
-                >
-                  Open module
-                  <span className="h-1.5 w-1.5 rounded-full bg-blue-300 shadow-[0_0_12px_rgba(147,197,253,1)]" />
-                </button>
+                
               </div>
             </SpotlightCard>
           ))}

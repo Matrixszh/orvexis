@@ -485,8 +485,8 @@ export default function ProductPage() {
                 <UIButton href="/contact" className="bg-[#130FF7] text-white border border-[#130FF7]/30 shadow-[0_0_30px_rgba(19,15,247,0.3)]">
                   Start Now
                 </UIButton>
-                <UIButton href="/contact" className="border border-white/10 bg-white/[0.03] text-white">
-                  Contact Us
+                <UIButton href="#info" className="border border-white/10 bg-white/[0.03] text-white">
+                  Explore
                 </UIButton>
               </div>
               <div className="flex flex-wrap gap-6 text-sm text-zinc-400">
@@ -525,7 +525,7 @@ export default function ProductPage() {
           </div>
         </section>
 
-        <section className="pt-20 grid gap-4 py-4 md:grid-cols-2 xl:grid-cols-4">
+        <section className="pt-20 grid gap-4 py-4 md:grid-cols-2 xl:grid-cols-4" id="info">
           {highlights.map((item) => (
             <FeatureHighlight key={item.title} {...item} />
           ))}
@@ -566,10 +566,10 @@ export default function ProductPage() {
               </div>
               <div className="flex flex-wrap gap-4">
                 <UIButton href="/contact" className="bg-[#130FF7] text-white border border-[#130FF7]/30 shadow-[0_0_30px_rgba(19,15,247,0.3)]">
-                  Start Free Trial
+                  Start Your Trial
                 </UIButton>
-                <UIButton href="/contact" className="border border-white/10 bg-white/[0.04] text-white">
-                  Book a Demo
+                <UIButton href="/services" className="border border-white/10 bg-white/[0.04] text-white">
+                  Explore Services
                 </UIButton>
               </div>
             </div>

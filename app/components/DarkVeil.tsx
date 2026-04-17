@@ -1,6 +1,7 @@
 'use client';
 
 import { useRef, useEffect } from 'react';
+import Link from 'next/link';
 import { Renderer, Program, Mesh, Triangle, Vec2 } from 'ogl';
 
 const vertex = `
@@ -200,13 +201,19 @@ export default function DarkVeil({
         {/* Bottom content */}
           
 
-          <div className="flex gap-4 justify-center ">
-            <button className="h-16 min-w-[150px] bg-white text-zinc-900 text-sm uppercase tracking-[0.25em]">
+          <div className="pointer-events-auto flex justify-center gap-4">
+            <Link
+              href="/contact"
+              className="inline-flex h-16 min-w-[150px] items-center justify-center bg-white text-sm uppercase tracking-[0.25em] text-zinc-900"
+            >
               Contact
-            </button>
-            <button className="h-16 min-w-[150px] bg-zinc-900 text-white text-sm uppercase tracking-[0.25em] ">
+            </Link>
+            <Link
+              href="/product"
+              className="inline-flex h-16 min-w-[150px] items-center justify-center bg-zinc-900 text-sm uppercase tracking-[0.25em] text-white"
+            >
               Explore
-            </button>
+            </Link>
           </div>
         
       </section>
