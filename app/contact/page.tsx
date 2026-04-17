@@ -4,7 +4,6 @@ import Image from "next/image";
 import {
   ArrowRight,
   CheckCircle2,
-  ChevronDown,
   Globe,
   Mail,
   MapPin,
@@ -54,15 +53,6 @@ const contactCards: ContactCard[] = [
     detail: "Learn more about us",
     icon: Globe,
   },
-];
-
-const faqItems = [
-  "What services do you offer?",
-  "Do you offer ongoing support?",
-  "How long does integration take?",
-  "Can you work with our existing tools?",
-  "Is my data secure?",
-  "Can you explain your pricing model?",
 ];
 
 const footerLinks = [
@@ -200,31 +190,8 @@ export default function ContactPage() {
           </div>
 
           <div className="space-y-6">
-            <div className="overflow-hidden rounded-[28px] border border-white/8 bg-white/[0.03] shadow-[0_0_40px_rgba(19,15,247,0.08)]">
-              <div className="relative h-[260px] border-b border-white/8 bg-[linear-gradient(180deg,rgba(8,12,30,0.92),rgba(5,8,20,0.96))]">
-                <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:34px_34px] opacity-40" />
-                <div className="absolute left-[18%] top-[26%] h-2 w-2 rounded-full bg-white/60" />
-                <div className="absolute left-[45%] top-[56%] h-2 w-2 rounded-full bg-white/60" />
-                <div className="absolute left-[70%] top-[36%] h-2 w-2 rounded-full bg-white/60" />
-                <div className="absolute left-[60%] top-[44%] flex h-14 w-14 items-center justify-center rounded-full bg-[#130FF7] text-white shadow-[0_0_30px_rgba(19,15,247,0.4)]">
-                  <MapPin className="h-6 w-6" strokeWidth={1.8} />
-                </div>
-              </div>
-              <div className="grid gap-5 p-6 md:grid-cols-[minmax(0,1fr)_auto] md:items-end">
-                <div className="space-y-2">
-                  <h3 className="text-2xl font-semibold text-white">Our Location</h3>
-                  <p className="text-base leading-7 text-zinc-300">
-                    123 AI Avenue, Suite 400
-                    <br />
-                    San Francisco, CA 94105
-                  </p>
-                </div>
-                <button className="inline-flex items-center justify-center gap-3 rounded-2xl bg-[#130FF7] px-5 py-3 text-sm font-medium text-white shadow-[0_0_30px_rgba(19,15,247,0.25)]">
-                  Get Directions
-                  <ArrowRight className="h-4 w-4" strokeWidth={1.5} />
-                </button>
-              </div>
-            </div>
+              
+            
 
             <div className="rounded-[28px] border border-white/8 bg-white/[0.03] p-7 shadow-[0_0_40px_rgba(19,15,247,0.08)]">
               <h3 className="text-2xl font-semibold text-white">Why Choose Us?</h3>
@@ -245,45 +212,7 @@ export default function ContactPage() {
           </div>
         </section>
 
-        <section className="py-10">
-          <div className="mb-8 text-center">
-            <h2 className="text-3xl font-semibold text-white">Frequently Asked Questions</h2>
-            <p className="mt-3 text-base text-zinc-400">Find answers to common questions.</p>
-          </div>
-          <div className="grid gap-4 md:grid-cols-2">
-            {faqItems.map((item) => (
-              <button
-                key={item}
-                className="flex items-center justify-between rounded-2xl border border-white/8 bg-white/[0.03] px-5 py-4 text-left text-sm text-zinc-200 transition-colors duration-300 hover:border-[#130FF7]/35 hover:bg-white/[0.05]"
-              >
-                <span>{item}</span>
-                <ChevronDown className="h-4 w-4 text-zinc-400" strokeWidth={1.5} />
-              </button>
-            ))}
-          </div>
-        </section>
-
-        <section className="py-10">
-          <div className="rounded-[28px] border border-[#130FF7]/20 bg-[linear-gradient(90deg,rgba(19,15,247,0.2),rgba(19,15,247,0.1),rgba(255,255,255,0.03))] px-8 py-8 shadow-[0_0_50px_rgba(19,15,247,0.12)]">
-            <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
-              <div className="space-y-3">
-                <h3 className="text-3xl font-semibold tracking-tight text-white">Still Have Questions? Let’s Talk</h3>
-                <p className="max-w-2xl text-base leading-7 text-zinc-300">
-                  Schedule a call with our team and let’s discuss your project.
-                </p>
-              </div>
-              <div className="flex flex-wrap gap-4">
-                <UIButton href="/contact" className="bg-[#130FF7] text-white border border-[#130FF7]/30 shadow-[0_0_30px_rgba(19,15,247,0.3)]">
-                  Schedule Call
-                </UIButton>
-                <UIButton href="/contact" className="border border-white/10 bg-white/[0.04] text-white">
-                  Contact Sales
-                </UIButton>
-              </div>
-            </div>
-          </div>
-        </section>
-
+       
         <footer className="border-t border-white/10 bg-zinc-950 -mx-6 lg:-mx-12">
           <div className="flex flex-col gap-10 px-6 py-10 md:px-12 lg:flex-row lg:items-end lg:justify-between">
             <div className="space-y-4">
