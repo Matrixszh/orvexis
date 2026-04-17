@@ -254,10 +254,10 @@ export default function ServicesPage() {
               </div>
               <div className="flex flex-wrap gap-4">
                 <UIButton href="/contact" className="bg-[#130FF7] text-white border border-[#130FF7]/30 shadow-[0_0_30px_rgba(19,15,247,0.3)]">
-                  Start Free Trial
+                  Reach Out
                 </UIButton>
-                <UIButton href="/contact" className="border border-white/10 bg-white/[0.04] text-white">
-                  Book a Demo
+                <UIButton href="/product" className="border border-white/10 bg-white/[0.04] text-white">
+                  Explore Nexa
                 </UIButton>
               </div>
             </div>
